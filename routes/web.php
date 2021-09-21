@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+}); 
+
+//Route::get('/anasayfa','App@index'); bu kod laravelin eski sürümünde bu şekilde calısıyormus
+//Route::get('/hakkimizda','App@hakkimizda');
+
+Route::get('/anasayfa', 'App\Http\Controllers\App@index');
+Route::get('/hakkimizda', 'App\Http\Controllers\App@hakkimizda');
